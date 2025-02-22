@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert videos to audio online. Extract audio from videos and download as MP3 files. Fast, free, and easy to use!">
+    <meta name="keywords" content="video to audio, extract audio, convert video to mp3, online video tools">
+    <meta name="author" content="Your Name">
+    <title>Video to Audio Converter</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Converter Tool */
+        #converter-tool {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+        }
+
+        #converter-tool input[type="file"] {
+            display: none;
+        }
+
+        #converter-tool label.file-label {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #converter-tool label.file-label:hover {
+            background-color: #0056b3;
+        }
+
+        #converter-tool button {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        #converter-tool button:hover {
+            background-color: #0056b3;
+        }
+
+        #audio-container {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        #audio-container audio {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 1rem;
+        }
+
+        #download-link {
+            display: none;
+            margin-top: 1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        #download-link:hover {
+            color: #0056b3;
+        }
+
+        /* Ad Units */
+        .adsbygoogle {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            box-shadow: var(--box-shadow);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            #converter-tool {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Video to Audio Converter</h1>
+        <p>Extract audio from videos and download as MP3 files.</p>
+    </header>
+
+    <main>
+        <!-- Top Ad Unit -->
+        <section id="ad-top">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </section>
+
+        <!-- Converter Tool -->
+        <section id="converter-tool">
+            <label for="video-input" class="file-label">Choose Video</label>
+            <input type="file" id="video-input" accept="video/*">
+            <button id="convert-btn">Convert to Audio</button>
+            <div id="audio-container">
+                <audio id="audio-output" controls></audio>
+                <a id="download-link" download="extracted-audio.mp3">Download Audio</a>
+            </div>
+        </section>
+
+        <!-- Bottom Ad Unit -->
+        <section id="ad-bottom">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Video to Audio Converter. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript Functionality
+        document.getElementById('convert-btn').addEventListener('click', function() {
+            const fileInput = document.getElementById('video-input');
+            const audioOutput = document.getElementById('audio-output');
+            const downloadLink = document.getElementById('download-link');
+
+            if (fileInput.files.length === 0) {
+                alert('Please select a video file.');
+                return;
+            }
+
+            const file = fileInput.files[0];
+            const videoUrl = URL.createObjectURL(file);
+
+            // Create a video element to extract audio
+            const video = document.createElement('video');
+            video.src = videoUrl;
+
+            // Create an audio context
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const source = audioContext.createMediaElementSource(video);
+
+            // Create a destination node
+            const destination = audioContext.createMediaStreamDestination();
+            source.connect(destination);
+
+            // Start playing the video to extract audio
+            video.play();
+
+            // Capture the audio stream
+            const mediaRecorder = new MediaRecorder(destination.stream);
+            const chunks = [];
+
+            mediaRecorder.ondataavailable = function(e) {
+                chunks.push(e.data);
+            };
+
+            mediaRecorder.onstop = function() {
+                const blob = new Blob(chunks, { type: 'audio/mp3' });
+                const audioUrl = URL.createObjectURL(blob);
+
+                // Set the audio source and download link
+                audioOutput.src = audioUrl;
+                downloadLink.href = audioUrl;
+                downloadLink.style.display = 'block';
+            };
+
+            // Start recording
+            mediaRecorder.start();
+
+            // Stop recording after the video ends
+            video.onended = function() {
+                mediaRecorder.stop();
+            };
+        });
+    </script>
+</body>
+</html>
